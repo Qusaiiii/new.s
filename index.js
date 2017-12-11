@@ -499,7 +499,7 @@ client.on('message', message => {
 
 
 });
-});
+
 
 var PREFIX = '*';
 
