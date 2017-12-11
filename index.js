@@ -501,7 +501,7 @@ client.on('message', message => {
 });
 });
 
-var PREFIX = 'البرفكس';
+var PREFIX = '*';
 
 client.on('message', message => {
 
