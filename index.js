@@ -256,7 +256,9 @@ client.on('message', message => {
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
  __Powered By__: King Of Game Team
-
+**Owners**:
+Peery#0609
+iTz_Volcano#8188
 
 Server Support : https://discord.gg/4qpRqE2
 
