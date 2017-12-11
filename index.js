@@ -500,6 +500,7 @@ client.on('message', message => {
 
 });
 
+var PREFIX = `*`
 
 client.on('message', message => {
 
