@@ -518,7 +518,7 @@ var args = message.content.substring(PREFIX.length).split(' ');
                 return;
             }
 
-            if (!servers[message.guild.id]) servers[message.guild.id] = {
+            if (!server[message.guild.id]) server[message.guild.id] = {
                 queue: []
             }
 
