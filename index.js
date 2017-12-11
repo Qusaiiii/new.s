@@ -437,10 +437,11 @@ client.on("message", message => {
 
 });
 
-client.user.setGame(`*help | *invite `,`https://www.twitch.tv/peery13`);
-  client.user.setStatus("idle")  
-});
 
+client.on("ready", () => {
+  const Games = [`*help | *invite`]
+  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+});
 
 
 client.on("message", message => {    
@@ -489,7 +490,8 @@ client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
 		 message.channel.send('**Choose**: *help.ar (arabic) | *help.us (english)');
-		 
+
+	     
  
 	 }
 });
