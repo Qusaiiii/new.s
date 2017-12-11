@@ -500,50 +500,36 @@ client.on('message', message => {
 
 });
 
-var PREFIX = `*`
-
 client.on('message', message => {
+    var prefix = "!"
+    let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
 
-var args = message.content.substring(PREFIX.length).split(' ');
+  let args = message.content.split(" ").slice(1);
 
-    switch (args[0].toLowerCase()) {
-        case 'play':
-            if (!args[1]) {
-                message.channel.sendMessage('ارجو وضع رابط');
-                return;
-            }
 
-            if (!message.member.voiceChannel) {
-                    message.channel.sendMessage('يجب عليك ان تكون في روم صوتي');
-                return;
-            }
+if(command == "draw") {
+    var Canvas = require('canvas')
+  , Image = new Canvas.Image
+  , canvas = new Canvas(450, 170)
+  , ctx = canvas.getContext('2d');
+  ctx.font = '30px Impact';
+  let args = message.content.split(" ").slice(1);
+  
+Image.src = canvas.toBuffer();
 
-            if (!server[message.guild.id]) server[message.guild.id] = {
-                queue: []
-            }
+    console.log(Image);
+ctx.drawImage(Image, 0, 0, Image.width / 470, Image.height / 170);
+ctx.fillText(args.join("  "),110, 70);
 
-            var server = servers[message.guild.id];
 
-            server.queue.push(args[1]);
+ctx.beginPath();
+ctx.lineTo(50, 102);
+ctx.stroke();
 
-            if (!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
-                play(connection, message);
-            });
-            break;
-            case 'skip':
-            var server = servers[message.guild.id];
-
-            if(server.dispatcher) server.dispatcher.end();
-                break;
-
-                case 'stop':
-                    var server = server = servers[message.guild.id];
-
-                    if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
-                    break;
-    }
-});
-
+message.channel.sendFile(canvas.toBuffer());
+}
+	
 
 client.login(process.env.BOT_TOKEN);
 
