@@ -570,7 +570,7 @@ client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
 	    
-                        message.channel.send('**Choose**:*help-ar ➾ arabic |*help-en ➾ english');
+                        message.channel.send('**Choose**: *help-ar ➾ arabic | *help-en ➾ english');
 
     }
 });
