@@ -561,6 +561,7 @@ client.on('message', message => {
       .addField('📓| Offline',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
       .addField('➡| Server Members',`${message.guild.memberCount}`)
       message.channel.send(IzRo);
+	
     });
 
 
@@ -568,14 +569,11 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-
-
-message.channel.send('**Choose**:*help-ar ➾ arabic |*help-en ➾ english');
+	    
+                        message.channel.send('**Choose**:*help-ar ➾ arabic |*help-en ➾ english');
 
     }
 });
-
-
 
 client.login(process.env.BOT_TOKEN);
 
