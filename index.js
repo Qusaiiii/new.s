@@ -291,7 +291,7 @@ client.on('message', message => {
 
 https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 
-Server Support : https://discord.gg/4qpRqE2
+Server Support : 
 `);
 
 message.channel.send('**تم الارسال في الخاص**');
@@ -547,6 +547,6 @@ var args = message.content.substring(PREFIX.length).split(' ');
 });
 
     
-client.bot = (process.env.BOT_TOKEN)
+client.login = (process.env.BOT_TOKEN)
 
 var prefix = '*'
