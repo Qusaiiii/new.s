@@ -570,8 +570,8 @@ client.on('message', message => {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .addField("*help-ar (arabic)")
-  .addField("*help-en (english)")
+  .addField("*help-ar ➾ arabic")
+  .addField("*help-en ➾ english")
   .setTimestamp()
 message.channel.sendEmbed(embed);
 
