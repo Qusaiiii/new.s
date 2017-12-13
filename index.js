@@ -563,40 +563,20 @@ client.on('message', message => {
       message.channel.send(IzRo);
     });
 
-
 client.on('message', message => {
-     if (message.content === "*help") {
-            if(!message.channel.guild) return message.reply('** This command only for servers **');
-     let embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .addField("**عدد السيرفرات الي فيها البوت:**" , client.guilds.size)
-  .addField("**المستخدمين:**"
-  .setTimestamp()
+    if (message.author.bot) return;
+     if (message.content === prefix + "invite") {
+
+
+
+message.channel.send('**Choose**: *help-ar (arabic) | *help-en (english)');	    
 message.channel.sendEmbed(embed);
+	     
     }
 });
+	
+message.channel.sendEmbed(embed);
 
-
-function pluck(array) {
-    return array.map('function(item) { return item["name"]; }');
-}
-
-client.on('ready', () => {
-  console.log(`Welcomer Ready By RexBoss For SmartSupport`);
-});
-
-
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {      const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-  return channel.send(`**
-
-[ ${member} ] Welcome to server **The King Bot** Enjoy :heart:   **﹞`)
-message.channel.send({embed})
-
-}).catch(console.error)
-})
 
 
 client.login(process.env.BOT_TOKEN);
