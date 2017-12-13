@@ -536,77 +536,30 @@ m.sendMessage(args)
 }
 })
     
-
             
-client.on('ready', function(){
-    var ms = 100000 ;
-    var setGame = [`*help | ${client.guilds.size} Servers`,`*help Users ${client.users.size}` ,  "website https://on-bot.weebly.com/ "];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/peery`);
-    }, ms);
-
-});
-
-  message.channel.send({embed});
-   }
+client.on("ready", () => {
+  const Games = [`*help | ${client.guilds.size} servers`]
+  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
 	     
-
-
-var PREFIX = '*';
-
 client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='member')
+      var IzRo = new Discord.RichEmbed()
+      .setThumbnail(message.author.avatarURL)
+      .setFooter(message.author.username, message.author.avatarURL) 
+      .setTitle('🌷| Members info')
+      .addBlankField(true)
+      .addField('📗| Online',
+      `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)
+      .addField('📕| DND',`${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`)
+      .addField('📙| Idle',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`)
+      .addField('📓| Offline',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
+      .addField('➡| Server Members',`${message.guild.memberCount}`)
+      message.channel.send(IzRo);
+    });
 
-var args = message.content.substring(PREFIX.length).split(' ');
 
-    switch (args[0].toLowerCase()) {
-        case 'play':
-            if (!args[1]) {
-                message.channel.sendMessage('يجب ان تضع الرابط');
-                return;
-            }
-
-            if (!message.member.voiceChannel) {
-                    message.channel.sendMessage('يجب عليك ان تكون في روم صوتي');
-                return;
-            }
-
-            if (!servers[message.guild.id]) servers[message.guild.id] = {
-                queue: []
-            }
-
-            var server = servers[message.guild.id];
-
-            server.queue.push(args[1]);
-
-            if (!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
-                play(connection, message);
-            });
-            break;
-            case 'skip':
-            var server = servers[message.guild.id];
-
-            if(server.dispatcher) server.dispatcher.end();
-                break;
-
-                case 'stop':
-                    var server = server = servers[message.guild.id];
-
-                    if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
-                    break;
-    }
-});
-
-    
 client.login(process.env.BOT_TOKEN);
 
 var prefix = '*'
