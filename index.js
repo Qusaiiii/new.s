@@ -563,18 +563,16 @@ client.on('message', message => {
       message.channel.send(IzRo);
     });
 
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "invite") {
 
-
-
-message.channel.send('**Choose**: *help-ar (arabic) | *help-en (english)');	    
-message.channel.sendEmbed(embed);
-	     
-    }
-});
 	
+client.on('message', message => {
+     if (message.content === "*help") {
+            if(!message.channel.guild) return message.reply('** This command only for servers **');
+     let embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .addField("*help-ar (arabic)")
+  .addField("*help-en (english)")
+  .setTimestamp()
 message.channel.sendEmbed(embed);
 
 
