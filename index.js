@@ -156,7 +156,7 @@ __~~The King Bot~~__ By: Peery#0609
 *help.us | **commands in english**
 *bc <message> | **to message all server members**
 *invs | **your server invite link**
-*staff | **staff bot**
+*staff | **bot owner**
 =======================================================================================
 Server Support : https://discord.gg/twdHNJT
 =======================================================================================
@@ -205,7 +205,7 @@ __~~The King Bot~~__ By: Peery#0609
 *help.us | **لارسال الاوامر بالانجليش** 
 *bc <message> | **لارسال رسالة لجميع اعضاء السيرفر **
 *invs | **للحصول على رابط دخول سيرفرك **
-*staff | **طاقم عمل البوت**
+*own | **مسؤول البوت**
 =======================================================================================
 Server Support : https://discord.gg/twdHNJT
 =======================================================================================
@@ -242,7 +242,7 @@ if (message.author.bot) return;
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "staff") {
+     if (message.content === prefix + "own") {
 
 
  message.author.sendMessage(`
