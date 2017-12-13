@@ -138,30 +138,59 @@ __~~The King Bot~~__ By: Peery#0609
 ╱╰━┻╯╰┻━━┻╯╰━┻┻╯╰┻━╮┣━━━┻━━┻━╯
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
-● Bot Prefix: ' * ' ●
-●  Bot commands: ●
-*perm | **your role permissions**
-*message <player> <msg> | **message player from the bot**
-*invite | **invite bot to your server**
-*ser-av| **server avatar**
-*bot | **informations bot**
-*ping | **your ping**
-*mute <mention>  | **mute player**
-*unmute <mention> | **unmute player**
-*kick <mention> | **kick player**
-*server | **informations about server**
-*uptime | **to see uptime**
-*roll | **roll**
-*help.ar | **commands in arabic**
-*help.us | **commands in english**
-*bc <message> | **to message all server members**
-*invs | **your server invite link**
-*staff | **bot owner**
-=======================================================================================
-Server Support : https://discord.gg/twdHNJT
-=======================================================================================
-https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
-=============================================================================================
+╔[❖════════════❖]╗
+    Prefix = ' * '
+╚[❖════════════❖]╝
+
+╔[❖════════════❖]╗
+   Admin Commands
+╚[❖════════════❖]╝
+
+ ❖ *kick <mention > | kick member from server ❖
+ 
+ ❖ *mute < mention >| mute member
+
+ ❖ *unmute <mention> | unmute member
+  
+ ❖ *bc <message> | message all members in server
+
+
+╔[❖════════════❖]╗
+ General  Commands
+╚[❖════════════❖]╝
+
+❖ *roll <number> | role 
+
+❖ *ser-av | server avatar
+
+❖ *uptime | to see uptime
+
+❖ *invs | server invite link
+
+❖ *own | bot owner
+
+❖ *help.ar | help in arabic
+
+❖ *help.us | help in english
+
+❖ *ping | to see ping
+
+❖ *bot | bot informations 
+
+❖ *server | server informations 
+
+❖ *invite | bot invite link
+
+==================================================================
+
+Server support: https://discord.gg/twdHNJT
+
+==================================================================
+
+bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+
+==================================================================
+
 `);
 
     }
