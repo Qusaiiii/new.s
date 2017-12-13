@@ -139,11 +139,11 @@ __~~The King Bot~~__ By: Peery#0609
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
 ╔[❖════════════❖]╗
-    Prefix = ' * '
+             Prefix = ' * '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
-   Admin Commands
+             Admin Commands
 ╚[❖════════════❖]╝
 
  ❖ *kick <mention > | kick member from server ❖
@@ -156,7 +156,7 @@ __~~The King Bot~~__ By: Peery#0609
 
 
 ╔[❖════════════❖]╗
- General  Commands
+            General  Commands
 ╚[❖════════════❖]╝
 
 ❖ *roll <number> | role 
@@ -218,14 +218,14 @@ __~~The King Bot~~__ By: Peery#0609
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
 ╔[❖════════════❖]╗
-    Prefix ' * '
+           Prefix = ' * '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
-   اوامر الادارية
+            اوامر الادارية
 ╚[❖════════════❖]╝
 
- ❖ *kick <mention > | لطرد عضو من سيرفر
+ ❖  *kick <mention > | لطرد عضو من سيرفر
  
  ❖ *mute < mention >| اسكات عضو 
 
@@ -235,7 +235,7 @@ __~~The King Bot~~__ By: Peery#0609
 
 
 ╔[❖════════════❖]╗
-    اوامر عامة
+            اوامر عامة
 ╚[❖════════════❖]╝
 
 ❖ *roll <number> ➾ رقعة
@@ -266,6 +266,7 @@ Server support: https://discord.gg/twdHNJT
 bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 
 ==================================================================
+
 
 `);
 
