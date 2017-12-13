@@ -11744,6 +11744,7 @@ message.member.addRole(message.guild.roles.find("name", "100"));
 
 if (message.content === "*colors") {
 	const embed = new Discord.RichEmbed()
+	message.channel.send('**Type**: *color (color number)');
 	.setColor('RANDOM')
 	.setFooter('Color', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
 	.setDescription(`Type: *color <number>`)
