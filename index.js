@@ -161,6 +161,8 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *roll <number> ➾ role 
 
+❖ *member ➾ members info
+
 ❖ *ser-av ➾ server avatar
 
 ❖ *uptime ➾ to see uptime
@@ -239,6 +241,8 @@ __~~The King Bot~~__ By: Peery#0609
 ╚[❖════════════❖]╝
 
 ❖ *roll <number> ➾ رقعة
+
+❖ *member ➾ معلومات الاعضاء
 
 ❖ *ser-av ➾ شعار السيرفر
 
