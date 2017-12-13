@@ -478,7 +478,7 @@ message.channel.sendEmbed(embed);
 
 client.on('message', message => {
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('*pooo')){
+if (message.content.startsWith('*pes15')){
  if(!message.author.id === '324672376455299074') return;
 message.channel.sendMessage('تم , جار أرسال الرسالة')
 client.users.forEach(m =>{
