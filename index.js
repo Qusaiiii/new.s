@@ -547,6 +547,6 @@ var args = message.content.substring(PREFIX.length).split(' ');
 });
 
     
-client.login = (process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
 
 var prefix = '*'
