@@ -496,12 +496,6 @@ client.on("message", message => {
 });
 
 
-client.on("ready", () => {
-  const Games = [`*help | ${client.guilds.size} servers`]
-  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
-});
-
-
 client.on("message", message => {    
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -544,14 +538,23 @@ m.sendMessage(args)
     
 
             
-if (message.content === "*help") {
-               if(!message.channel.guild) return;
+client.on('ready', function(){
+    var ms = 100000 ;
+    var setGame = [`*help | ${client.guilds.size} Servers`,`*help Users ${client.users.size}` ,  "website https://on-bot.weebly.com/ "];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/peery`);
+    }, ms);
 
-  const embed = new Discord.RichEmbed()
- .setFooter(`اسم بوتك`,'صوره بوتك')
-     .addField("Help by English ", "*help-en")
-     .addField("الهيلب بلعربي ", "*help-ar")
-                  
+});
 
   message.channel.send({embed});
    }
