@@ -158,7 +158,7 @@ __~~The King Bot~~__ By King OF Game Team
 *invs | **your server invite link**
 *staff | **staff bot**
 =======================================================================================
-Server Support : https://discord.gg/4qpRqE2
+Server Support : https://discord.gg/twdHNJT
 =======================================================================================
 https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 =============================================================================================
@@ -207,7 +207,7 @@ __~~The King Bot~~__ By King OF Game Team
 *invs | **للحصول على رابط دخول سيرفرك **
 *staff | **طاقم عمل البوت**
 =======================================================================================
-Server Support : https://discord.gg/4qpRqE2
+Server Support : https://discord.gg/twdHNJT
 =======================================================================================
 https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 =============================================================================================
@@ -261,7 +261,7 @@ client.on('message', message => {
 Peery#0609
 iTz_Volcano#8188
 
-Server Support : https://discord.gg/4qpRqE2
+Server Support : https://discord.gg/twdHNJT
 
 https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 `);
@@ -291,7 +291,7 @@ client.on('message', message => {
 
 https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
 
-Server Support : 
+Server Support : https://discord.gg/twdHNJT
 `);
 
 message.channel.send('**تم الارسال في الخاص**');
