@@ -441,7 +441,7 @@ client.on("message", message => {
 
 
 client.on("ready", () => {
-  const Games = [`*help | *invite`]
+  const Games = [`*help | ${client.guilds.size}`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
 
