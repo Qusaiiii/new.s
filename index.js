@@ -120,7 +120,7 @@ client.on('message', function(message) {
 	
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help.us") {
+     if (message.content === prefix + "help-en") {
 		 message.channel.send('**The Message Was Sent On Private**');
             
 	
@@ -146,40 +146,40 @@ __~~The King Bot~~__ By: Peery#0609
              Admin Commands
 ╚[❖════════════❖]╝
 
- ❖ *kick <mention > | kick member from server ❖
+ ❖ *kick <mention > ➾ kick member from server ❖
  
- ❖ *mute < mention >| mute member
+ ❖ *mute < mention > ➾ mute member
 
- ❖ *unmute <mention> | unmute member
+ ❖ *unmute <mention> ➾ unmute member
   
- ❖ *bc <message> | message all members in server
+ ❖ *bc <message> ➾ message all members in server
 
 
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
 
-❖ *roll <number> | role 
+❖ *roll <number> ➾ role 
 
-❖ *ser-av | server avatar
+❖ *ser-av ➾ server avatar
 
-❖ *uptime | to see uptime
+❖ *uptime ➾ to see uptime
 
-❖ *invs | server invite link
+❖ *invs ➾ server invite link
 
-❖ *own | bot owner
+❖ *own ➾ bot owner
 
-❖ *help.ar | help in arabic
+❖ *help-en ➾ help by arabic
 
-❖ *help.us | help in english
+❖ *help-en ➾ help by english
 
-❖ *ping | to see ping
+❖ *ping ➾ to see ping
 
-❖ *bot | bot informations 
+❖ *bot ➾ bot informations 
 
-❖ *server | server informations 
+❖ *server ➾ server informations 
 
-❖ *invite | bot invite link
+❖ *invite ➾ bot invite link
 
 ==================================================================
 
@@ -199,7 +199,7 @@ bot invite link: https://discordapp.com/oauth2/authorize?client_id=3887008638936
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help.ar") {
+     if (message.content === prefix + "help-ar") {
 		 message.channel.send('**تم ارسالك في الخاص**');
             
 	
@@ -225,13 +225,13 @@ __~~The King Bot~~__ By: Peery#0609
            اوامر الادارية
 ╚[❖════════════❖]╝
 
- ❖  *kick <mention > | لطرد عضو من سيرفر
+ ❖  *kick <mention > ➾ لطرد عضو
  
- ❖ *mute < mention >| اسكات عضو 
+ ❖ *mute < mention > ➾ اسكات عضو 
 
- ❖ *unmute <mention> | فك الاسكات من العضو
+ ❖ *unmute <mention> ➾ فك الاسكات من العضو
   
- ❖ *bc <message> | لارسال رسالة لجميع اعضاء السيرفر
+ ❖ *bc <message> ➾ لارسال رسالة لجميع اعضاء السيرفر
 
 
 ╔[❖════════════❖]╗
@@ -248,9 +248,9 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *own ➾ مسؤول البوت
 
-❖ *help.ar ➾ المساعدة في العربي
+❖ *help-ar ➾ المساعدة في العربي
 
-❖ *help.us ➾ المساعدة في الانجليزيلة
+❖ *help-en ➾ المساعدة في الانجليزيلة
 
 ❖ *ping ➾ عرض سرعه اتصال البوت
 
@@ -544,17 +544,19 @@ m.sendMessage(args)
     
 
             
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-		 message.channel.send('**Choose**: *help.ar (arabic) | *help.us (english)');
+if (message.content === "*help") {
+               if(!message.channel.guild) return;
 
-	     
- 
-	 }
+  const embed = new Discord.RichEmbed()
+ .setFooter(`اسم بوتك`,'صوره بوتك')
+     .addField("Help by English ", "*help-en")
+     .addField("الهيلب بلعربي ", "*help-ar")
+                  
 
-
+  message.channel.send({embed});
+   }
 });
+	     
 
 
 var PREFIX = '*';
