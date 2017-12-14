@@ -164,6 +164,8 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *roll <number> ➾ role 
 
+❖ *date ➾ see date
+
 ❖ *member ➾ members info
 
 ❖ *ser-av ➾ server avatar
@@ -250,6 +252,8 @@ __~~The King Bot~~__ By: Peery#0609
 ❖ *ser-av ➾ شعار السيرفر
 
 ❖ *uptime ➾ مدة التشغيل
+
+❖ *date | التاريخ
 
 ❖ *invs ➾ رابط دخول سيرفرك
 
