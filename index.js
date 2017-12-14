@@ -6,7 +6,7 @@ const client = new Discord.Client();
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
+  if (msg.content === 'pin31231231241sdg') {
     msg.reply('Pong!');
   }
 });
