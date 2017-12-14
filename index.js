@@ -12,7 +12,7 @@ client.on('message', msg => {
 });
 
 client.on("ready", () => {
-  const Games = [`*help | ${client.guilds.size} server`]
+  const Games = [`*help | in ${client.guilds.size} servers`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
 
