@@ -11,9 +11,10 @@ client.on('message', msg => {
   }
 });
 
-
-  const Games = [`*help | ${client.guilds.size} Servers!`]
+client.on("ready", () => {
+  const Games = [`*help | ${client.guilds.size} server`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+});
 
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
