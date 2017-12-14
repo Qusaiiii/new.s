@@ -574,7 +574,10 @@ client.on('message', message => {
 });
 
 
-
+client.on("guildDelete", guild => {
+console.log(`**The King Bot** Leave From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
+client.channels.get("390983810889678868").send('** The King Bot** ``Kicked`` From Server - -- = '+`**${guild.name}**`+' = -- '+'**Server Owner** -- =' +`**${guild.owner.user.username}**` +'= --')
+});
 
 client.login(process.env.BOT_TOKEN);
 
