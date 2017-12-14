@@ -574,44 +574,6 @@ client.on('message', message => {
 });
 
 
-client.on("message", message => {
-  var messageArray = message.content.substring(prefix.length).split(' ');
-  switch (messageArray[0].toLocaleLowerCase()) {
-    case "*clear" :
-    message.delete()
-if(!message.channel.guild) return
-                          if(message.member.hasPermissions(0x2000)){ if (!messageArray[1]) {
-  message.channel.fetchMessages()
-    .then(messages => {
-      message.channel.bulkDelete(messages);
- var     messagesDeleted = messages.array().length;
-       var embed = new Discord.RichEmbed()
- .setDescription(' Deleted **__``'+ messagesDeleted +'``__** Messages :pencil::white_check_mark:')
-       .setColor('RANDOM')
-      message.channel.sendEmbed(embed).then(m => m.delete(6000));
-    })
-                      } else {
-                      let messagecount = parseInt(messageArray[1]);
-  message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
-            let clear = new Discord.RichEmbed()
-            
-                                             .setColor('RANDOM')
-       .setDescription(' Deleted **__``'+ messageArray[1] +'``__** Messages :pencil::white_check_mark:')
-       message.channel.sendEmbed(clear).then(m => m.delete(2000));
-                                                                                  message.delete(9000);
-         }
-              } else {
-                  var manage = new Discord.RichEmbed()
-                  .setDescription('You Do Not Have Permission `MANAGE_MESSAGES')
-                  .setColor("RANDOM")
-                  message.channel.sendEmbed(manage)
-                  return;
-              }
-break;
-            }
-          
-}
-});
 
 
 client.login(process.env.BOT_TOKEN);
