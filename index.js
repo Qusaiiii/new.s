@@ -1,33 +1,19 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+ client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
-client.on("ready", async () => {
-             dateFormat.asString();
-             dateFormat.asString(new Date());
-  let time = dateFormat.asString('hh:mm:ss', new Date());
-  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'); 
-  console.log('~                -  By : Peery -                     ~');
-  console.log('   ~                    - '+time+' -                     ~')
-console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
 
   const Games = [`*help | ${client.guilds.size} Servers!`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
-
-      try {
-          let link = await bot.generateInvite(["ADMINISTRATOR"]);
-          console.log('=--------------------------------------------------------------=');
-          console.log('# | MyInviteLink : '+link)
-          console.log('# | MyUsername : '+xclient.user.username)
-          console.log('# | Tag : '+xclient.user.discriminator)
-          console.log('# | ServersCount : '+client.guilds.size)
-          console.log('=--------------------------------------------------------------=');
-      } catch(e) {
-          console.log(e.stack);
-      }
-    }
-});
-
 
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
