@@ -576,15 +576,15 @@ client.on('message', message => {
 
 client.on("guildDelete", guild => {
 console.log(`**The King Bot** Leave From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
-client.channels.get("390983810889678868").send('** The King Bot** ``Kicked`` From Server - -- = '+`**${guild.name}**`+' = -- '+'**Server Owner** -- =' +`**${guild.owner.user.username}**` +'= --')
+client.channels.get("390983810889678868").send('**The King Bot** ``Kicked`` From Server - -- = '+`**${guild.name}**`+' = -- '+'**Server Owner** -- =' +`**${guild.owner.user.username}**` +'= --')
 });
 
 client.on("guildCreate", guild => {
-client.channels.get("390983810889678868").send(`The's bot (BotName) has been **added** ❤ from this server **(${guild.name})** , Server Owner 👑 **(${guild.owner.user.username})**`)
+client.channels.get("390983810889678868").send(`The's bot **The King Bot** has been **added** ❤ from this server **(${guild.name})** , Server Owner 👑 **(${guild.owner.user.username})**`)
 });
 
 client.on("guildDelete", guild => {
-client.channels.get("390983810889678868").send(`The's bot (BotName) has been **removed** 😔 from this server **(${guild.name})** , Server Owner 👑 **(${guild.owner.user.username})**`)
+client.channels.get("390983810889678868").send(`**The King Bot** has been **removed** 😔 from this server **(${guild.name})** , Server Owner 👑 **(${guild.owner.user.username})**`)
 });
 
 client.on('guildCreate', guild => {
