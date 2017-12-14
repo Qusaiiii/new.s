@@ -595,6 +595,123 @@ client.on('guildCreate', guild => {
 });
 
 
+client.on('message', message => {
+  var prefix = "*";
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+
+let args = message.content.split(" ").slice(1);
+let x = args.join(" ")
+  if(message.content.startsWith(prefix + 'say')) {
+    message.channel.send("."+x)
+          message.delete()
+  }
+  
+ 
+if (command == "embed") {
+    let say = new Discord.RichEmbed()
+    .setDescription(args.join("  "))
+    .setColor(0x5500ff)
+    message.channel.sendEmbed(say);
+    message.delete();
+  }
+
+
+});
+
+client.on('message', message => {
+    
+    if (message.content === "*e2") {
+        setInterval(function(){
+        message.edit(':smiley:')
+        message.edit(':smile:')
+        message.edit(':sweat_smile:')
+        message.edit(':laughing:')
+        message.edit(':innocent:')
+        message.edit(':wink:')
+        message.edit(':blush:')
+        message.edit(':slight_smile:')
+        message.edit(':stuck_out_tongue_closed_eyes:')
+        message.edit(':upside_down:')
+        message.edit(':relaxed:')
+        message.edit(':yum:')
+        message.edit(':relieved:')
+        message.edit(':heart_eyes:')
+        message.edit(':kissing_heart:')
+        message.edit(':kissing:')
+        message.edit(':kissing_smiling_eyes:')
+        message.edit(':kissing_closed_eyes:')
+        message.edit(':stuck_out_tongue_winking_eye:')
+        message.edit(':stuck_out_tongue_closed_eyes:')
+        message.edit(':stuck_out_tongue:')
+        message.edit(':money_mouth:')
+        message.edit(':nerd:')
+        message.edit(':sunglasses:')
+        message.edit(':hugging:')
+        message.edit(':smirk:')
+        message.edit(':no_mouth:')
+        message.edit(':neutral_face:')
+        message.edit(':expressionless:')
+        message.edit(':unamused:')
+        message.edit(':rolling_eyes:')
+        message.edit(':thinking:')
+        message.edit(':flushed:')
+        message.edit(':disappointed:')
+        message.edit(':worried:')
+        message.edit(':angry:')
+        message.edit(':rage:')
+        message.edit(':pensive:')
+        message.edit(':confused:')
+        message.edit(':slight_frown:')
+        message.edit(':frowning2:')
+        message.edit(':persevere:')
+        message.edit(':confounded:')
+        message.edit(':tired_face:')
+        message.edit(':weary:')
+        message.edit(':triumph:')
+        message.edit(':open_mouth:')
+        message.edit(':scream:')
+        message.edit(':fearful:')
+        message.edit(':cold_sweat:')
+        message.edit(':hushed:')
+        message.edit(':frowning:')
+        message.edit(':anguished:')
+        message.edit(':cry:')
+        message.edit(':disappointed_relieved:')
+        message.edit(':sleepy:')
+        message.edit(':sweat:')
+        message.edit(':sob:')
+        message.edit(':dizzy_face:')
+        message.edit(':astonished:')
+        message.edit(':zipper_mouth:')
+        message.edit(':mask:')
+        message.edit(':thermometer_face:')
+        message.edit(':head_bandage:')
+        message.edit(':sleeping:')
+        message.edit(':poop:')
+        message.edit(':smiling_imp:')
+        message.edit(':imp:')
+        message.edit(':japanese_ogre:')
+        message.edit(':japanese_goblin:')
+        message.edit(':skull:')
+        message.edit(':smiley_cat:')
+        message.edit(':smile_cat:')
+        message.edit(':joy_cat:')
+        message.edit(':heart_eyes_cat:')
+        message.edit(':smirk_cat:')
+        message.edit(':kissing_cat:')
+        message.edit(':scream_cat:')
+        message.edit(':crying_cat_face:')
+        message.edit(':pouting_cat:')    
+
+        }, 2000)
+    }
+    
+	
 client.login(process.env.BOT_TOKEN);
 
 var prefix = '*'
