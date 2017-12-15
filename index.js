@@ -588,7 +588,7 @@ client.channels.get("390983810889678868").send('**The King Bot** ``Kicked`` From
 });
 
 client.on("guildCreate", guild => {
-client.channels.get("390983810889678868").send(`The's bot **The King Bot** has been **added** ❤ from this server **(${guild.name})** , Server Owner 👑 **(${guild.owner.user.username})**`)
+client.channels.get("390983810889678868").send(`**The King Bot** has been **added** ❤ from this server **(${guild.name})** , Server Owner 👑 **(${guild.owner.user.username})**`)
 });
 
 client.on("guildDelete", guild => {
