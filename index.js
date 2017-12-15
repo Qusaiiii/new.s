@@ -149,7 +149,9 @@ __~~The King Bot~~__ By: Peery#0609
              Admin Commands
 ╚[❖════════════❖]╝
 
- ❖ *kick <mention > ➾ kick member from server ❖
+ ❖ *kick <mention > ➾ kick member from server
+
+❖ *clear ➾ | clear chat
  
  ❖ *mute < mention > ➾ mute member
 
@@ -235,6 +237,8 @@ __~~The King Bot~~__ By: Peery#0609
  ❖  *kick <mention > ➾ لطرد عضو
  
  ❖ *mute < mention > ➾ اسكات عضو 
+
+ ❖ *clear  ➾ لتنضيف المحادثة
 
  ❖ *unmute <mention> ➾ فك الاسكات من العضو
   
