@@ -654,7 +654,7 @@ break;
 	
 	
 client.on("ready", () => {
-  const Games = [`*help | in ${client.guilds.size} servers`,`www.twitch.tv/peery13`]
+  const Games = [`*help | in ${client.guilds.size} servers`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
 
