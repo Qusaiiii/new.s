@@ -79,13 +79,6 @@ client.on('message', message => {
 }
 });
 
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'ping')) {
-if(!message.channel.guild) return;
-if (message.author.bot) return;
-    message.channel.sendMessage(`**Pong ! :** \`${Date.now() - message.createdTimestamp} ms\`:watch:`);
-    }
-});
 
 client.on('message', message => {
   
@@ -148,11 +141,15 @@ __~~The King Bot~~__ By: Peery#0609
 
  ❖ *kick <mention > ➾ kick member from server
 
-❖ *clear ➾ | clear chat
+ ❖ *clear ➾ clear chat
  
  ❖ *mute < mention > ➾ mute member
 
  ❖ *unmute <mention> ➾ unmute member
+
+ ❖ *ct <name> ➾ create channel
+
+ ❖ *cv <name> create voice channel
   
  ❖ *bc <message> ➾ message all members in server
 
@@ -236,6 +233,10 @@ __~~The King Bot~~__ By: Peery#0609
  ❖ *mute < mention > ➾ اسكات عضو 
 
  ❖ *clear  ➾ لتنضيف المحادثة
+
+ ❖ *cv <name> ➾ صنع روم صوتية
+
+ ❖ *ct <name> ➾ صنع روم كتابية
 
  ❖ *unmute <mention> ➾ فك الاسكات من العضو
   
@@ -674,7 +675,38 @@ if (message.content.startsWith("*cv")) {
 }
 });
 
+      client.on('message', message => {
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith('*ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('RANDOM')
+                        .addField('**Time Taken:**',msg + " ms :signal_strength: ")
+                        .addField('**WebSocket:**',api + " ms :signal_strength: ")
+         message.channel.send({embed:embed});
+                        }
+                    });
 
+client.on('message', message => {
+    if (message.content.startsWith("*avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
+});
 client.login(process.env.BOT_TOKEN);
 
 var prefix = '*'
