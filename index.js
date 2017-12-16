@@ -2,9 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
- client.user.setGame[`*help | in ${client.guilds.size} servers`]
+  const Games = [`*help | in ${client.guilds.size} servers`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
+
 client.on('message', msg => {
   if (msg.content === 'pin31231231241sdg') {
     msg.reply('Pong!');
