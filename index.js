@@ -2,8 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag} !`);
+client.on("ready", () => {
+  const Games = [`*help | in ${client.guilds.size} servers`]
+  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+});
 
 client.on('message', msg => {
   if (msg.content === 'pin31231231241sdg') {
@@ -12,10 +14,6 @@ client.on('message', msg => {
 });
 	
 	
-client.on("ready", () => {
-  const Games = [`*help | in ${client.guilds.size} servers`]
-  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
-});
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
     let ms = client.uptime;
