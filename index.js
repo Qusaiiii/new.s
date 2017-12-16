@@ -172,6 +172,8 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *own ➾ bot owner
 
+❖ *avatar ➾ your avatar account
+
 ❖ *help-en ➾ help by arabic
 
 ❖ *help-en ➾ help by english
@@ -250,6 +252,8 @@ __~~The King Bot~~__ By: Peery#0609
 ❖ *roll <number> ➾ قرعة
 
 ❖ *member ➾ معلومات الاعضاء
+
+❖ *avatar ➾ شعار حسابك
 
 ❖ *ser-av ➾ شعار السيرفر
 
