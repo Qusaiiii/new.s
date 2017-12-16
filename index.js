@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
- client.user.setGame(`*help | in ${client.guilds.size} servers`*`www.twitch.tv/zead11`)
+ client.user.setGame[`*help | in ${client.guilds.size} servers`]
   setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
 client.on('message', msg => {
