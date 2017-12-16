@@ -6,7 +6,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag} !`);
   client.user.setGame(`*help | ${client.guilds.size} servers`,`www.twitch.tv/zead11`);
 });
-
+client.login('Mzg4NzAwODYzODkzNjAyMzA0.DQ8m1A.8KfNMLUBTr40_yH17L-WSs_8g_k');
 
 client.on('message', msg => {
   if (msg.content === 'pin31231231241sdg') {
