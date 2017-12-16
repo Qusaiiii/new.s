@@ -10,7 +10,12 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 });
-
+	
+	
+client.on("ready", () => {
+  const Games = [`*help | in ${client.guilds.size} servers`]
+  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+});
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
     let ms = client.uptime;
@@ -653,11 +658,6 @@ break;
 });    
 	
 	
-client.on("ready", () => {
-  const Games = [`*help | in ${client.guilds.size} servers`]
-  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
-});
-
 client.login(process.env.BOT_TOKEN);
 
 var prefix = '*'
