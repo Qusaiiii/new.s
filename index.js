@@ -4,9 +4,6 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag} !`);
-  client.user.setGame(`*help | ${client.guilds.size} servers`,`www.twitch.tv/zead11`);
-});
-client.login('Mzg4NzAwODYzODkzNjAyMzA0.DQ8m1A.8KfNMLUBTr40_yH17L-WSs_8g_k');
 
 client.on('message', msg => {
   if (msg.content === 'pin31231231241sdg') {
@@ -654,7 +651,12 @@ break;
 
 }
 });    
-
+	
+	
+client.on("ready", () => {
+  const Games = [`*help | in ${client.guilds.size} servers`,`www.twitch.tv/peery13`]
+  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+});
 
 client.login(process.env.BOT_TOKEN);
 
