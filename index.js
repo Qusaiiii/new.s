@@ -141,7 +141,7 @@ __~~The King Bot~~__ By: Peery#0609
 
  ❖ *kick <mention > ➾ kick member from server
 
- ❖ *clear ➾ clear chat
+ ❖ *clear ➾ clear chat ( not ready yet fixing)
  
  ❖ *mute < mention > ➾ mute member
 
@@ -234,7 +234,7 @@ __~~The King Bot~~__ By: Peery#0609
  
  ❖ *mute < mention > ➾ اسكات عضو 
 
- ❖ *clear  ➾ لتنضيف المحادثة
+ ❖ *clear  ➾ لتنضيف المحادثة (fixing)
 
  ❖ *cv <name> ➾ صنع روم صوتية
 
