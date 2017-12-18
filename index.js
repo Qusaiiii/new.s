@@ -487,13 +487,12 @@ client.on("message", message => {
   let modlog = client.channels.find('name', 'console');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
   if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **");
-  if (!modlog) return message.reply("**لا يوجد الروم المراد ارسال المعلومات له 'Mute-Log'**");
+  if (!modlog) return message.reply("**لا يوجد الروم المراد ارسال المعلومات له 'console'**");
   if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **');
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .addField('UnMute ', ' | :white_check_mark: |')
     .addField('تم فك الميوت عن', `${user.username}#${user.discriminator} `)
-    .addField('السبب', '**انتهاء مدة لميوت**')
     .addField('بواسطة:', `${message.author.username}#${message.author.discriminator}`)
    message.channel.send({embed: embed});
 
