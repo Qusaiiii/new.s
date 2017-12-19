@@ -186,6 +186,13 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *invite ➾ bot invite link
 
+╔[❖════════════❖]╗
+                    Welcome
+╚[❖════════════❖]╝
+
+to enable welcome message do channel name "wlc-leave"
+
+
 ==================================================================
 
 Server support: https://discord.gg/twdHNJT
@@ -276,6 +283,13 @@ __~~The King Bot~~__ By: Peery#0609
 ❖ *server ➾ معلومات السيرفر
 
 ❖ *invite ➾ رابط دعوة البوت
+
+╔[❖════════════❖]╗
+                      الترحيب
+╚[❖════════════❖]╝
+
+لتفعيل خاصية الترحيب قم بعمل قناة اسمها "wlc-leave"
+
 ==================================================================
 
 Server support: https://discord.gg/twdHNJT
