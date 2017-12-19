@@ -719,7 +719,7 @@ client.on('guildMemberAdd', member => {
     .setDescription(`اهلا بك في السيرفر`)
     .addField(' :bust_in_silhouette:  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('GREEN')
-    .setFooter('TNT BOT', 'https://images-ext-2.discordapp.net/external/0Q1jL6dCXH7mYjiOBsF-8t0QJMPejHinEmLh_kwSkaM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/388700863893602304/d608a556d1bc36b1614f8cc1661957b9.png?width=225&height=225')
+    .setFooter('The King Bot', 'https://cdn.discordapp.com/icons/390551815072251904/418fa2788d8115808951c9881ba8f190.jpg')
 
 var channel =member.guild.channels.find('name', 'wlc')
 if (!channel) return;
