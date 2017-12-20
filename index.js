@@ -712,8 +712,24 @@ var channel =member.guild.channels.find('name', 'wlc')
 if (!channel) return;
 channel.send({embed : embed});
 });
-
-
+client.on('message', message => {
+    if (message.author !== client.user) return;
+    let prefix = '/';
+    if (!message.content.startsWith(prefix)) return;
+    const params = message.content.split(' ').slice(1);
+    if (message.content.startsWith(prefix + 'clear')) {
+        let messagecount = parseInt(params[0]);
+        message.channel.fetchMessages({ //Prune command, deletes mentioned number of messages. Example: /prune 20
+                limit: 100
+            })
+            .then(messages => {
+                let msg_array = messages.array();
+                msg_array = msg_array.filter(m => m.author.id === client.user.id);
+                msg_array.length = messagecount + 1;
+                msg_array.map(m => m.delete().catch(console.error));
+            });
+    }
+});
 client.login(process.env.BOT_TOKEN);
 
 var prefix = '*'
