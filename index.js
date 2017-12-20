@@ -4,9 +4,9 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
 
-bot.user.setGame('*help | in ${client.guilds.size} server')
+client.user.setGame('*help | in ${client.guilds.size} server')
 
-bot.user.setGame('*help | in ${client.guilds.size} server','www.twich.tv/peery13')
+client.user.setGame('*help | in ${client.guilds.size} server','www.twich.tv/peery13')
 
 });
 
