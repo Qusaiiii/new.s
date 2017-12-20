@@ -173,6 +173,8 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *own ➾ bot owner
 
+❖ *id ➾ your id
+
 ❖ *avatar ➾ your avatar account
 
 ❖ *help-en ➾ help by arabic
@@ -267,7 +269,9 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *uptime ➾ مدة التشغيل
 
-❖ *date | التاريخ
+❖ *id ➾ اي دي
+
+❖ *date ➾ التاريخ
 
 ❖ *invs ➾ رابط دخول سيرفرك
 
