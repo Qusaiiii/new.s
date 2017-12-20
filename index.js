@@ -719,7 +719,6 @@ channel.send({embed : embed});
 
 
 // Define client for Discord
-const client = new Discord.Client();
 // We have to define a moderator role, the name of a role you need to run certain commands
 const modRole = 'Administrator';
 
@@ -730,7 +729,7 @@ const items = JSON.parse(fs.readFileSync('items.json', 'utf8'));
 client.on('message', message => {
 
     // Variables
-    let prefix = '~';
+    let prefix = '*';
     let msg = message.content.toUpperCase();
     // Lets also add some new variables
     let cont = message.content.slice(prefix.length).split(" "); // This slices off the prefix, then stores everything after that in an array split by spaces.
