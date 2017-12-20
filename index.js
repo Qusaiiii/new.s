@@ -3,11 +3,9 @@ const client = new Discord.Client();
 
 
 client.on("ready", () => {
-
-
-client.on("ready", () => {
-  const Games = [`*help | *invite`]
-  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+ const Games = [`*help | *invite`]
+ setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
+	
 });
 
 client.on('message', msg => {
