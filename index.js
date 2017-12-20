@@ -10,6 +10,8 @@ bot.user.setGame('*help | in ${client.guilds.size} server')
 
 bot.user.setGame('*help | in ${client.guilds.size} server','www.twich.tv/peery13')
 
+});
+
 client.on('message', msg => {
   if (msg.content === 'pin31231231241sdg') {
     msg.reply('Pong!');
