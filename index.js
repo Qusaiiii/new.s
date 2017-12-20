@@ -1,7 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const economy = require('discord-eco');
-const fs = require('fs'); 
 
 
 client.on("ready", () => {
