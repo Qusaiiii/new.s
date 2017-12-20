@@ -4,8 +4,12 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
 
-bot.user.setStatus('dnd')
-	
+bot.user.setStatus('Online')
+
+bot.user.setGame('*help | in ${client.guilds.size} server')
+
+bot.user.setGame('*help | in ${client.guilds.size} server','www.twich.tv/peery13')
+
 client.on('message', msg => {
   if (msg.content === 'pin31231231241sdg') {
     msg.reply('Pong!');
