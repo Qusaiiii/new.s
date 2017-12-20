@@ -4,10 +4,10 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
 
-client.user.setGame('*help | in ${client.guilds.size} server')
 
-client.user.setGame('*help | in ${client.guilds.size} server','www.twich.tv/peery13')
-
+client.on("ready", () => {
+  const Games = [`*help | *invite`]
+  setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
 });
 
 client.on('message', msg => {
