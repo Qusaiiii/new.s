@@ -628,49 +628,7 @@ client.on('message', message => {
     }
 });
 
-
-client.on('message', function(message) {
-    if (message.author.bot) return;
-    if (message.author.id === client.user.id) return;
-    if (message.author.equals(client.user)) return;
-    if (!message.content.startsWith(prefix)) return;
-
-    var args = message.content.substring(prefix.length).split(' ');
-
-    switch (args[0].toLocaleLowerCase()) {
-          case "clear" :
-if(!message.channel.guild) return
-                                if(message.member.hasPermissions(0x2000)){ if (!args[1]) {
-        message.channel.fetchMessages()
-          .then(messages => {
-            message.channel.bulkDelete(messages);
-       var     messagesDeleted = messages.array().length;
-             var embed = new Discord.RichEmbed()
-             .setDescription('message Deleted ' + messagesDeleted)
-             .setColor('RANDOM')
-            message.channel.sendEmbed(embed);
-          })
-                            } else {
-                            let messagecount = parseInt(args[1]);
-        message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
-                  let clear = new Discord.RichEmbed()
-                  
-                                                   .setColor('RANDOM')
-             .setDescription('Messages Deleted ' + args[1])
-             message.channel.sendEmbed(clear)
-                                                                                        message.delete(10000);
-               }
-                    } else {
-                        var manage = new Discord.RichEmbed()
-                        .setDescription('You Do Not Have Permission `MANAGE_MESSAGES')
-                        .setColor("RANDOM")
-                        message.channel.sendEmbed(manage)
-                        return;
-                    }
-break;
-
-}
-});    
+  
 client.on("message", (message) => {
 if (message.content.startsWith("*ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
@@ -755,6 +713,22 @@ if (!channel) return;
 channel.send({embed : embed});
 });
 
+if(command === "clear") {
+    // This command removes all messages from all users in the channel, up to 100.
+    
+    // get the delete count, as an actual number.
+    const deleteCount = parseInt(args[0], 10);
+    
+    // Ooooh nice, combined conditions. <3
+    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
+      return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
+    
+    // So we get our messages, and delete them. Simple enough, right?
+    const fetched = await message.channel.fetchMessages({count: deleteCount});
+    message.channel.bulkDelete(fetched)
+      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+  }
+});
 
 client.login(process.env.BOT_TOKEN);
 
