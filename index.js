@@ -4,8 +4,6 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
 
-bot.user.setStatus('Online')
-
 bot.user.setGame('*help | in ${client.guilds.size} server')
 
 bot.user.setGame('*help | in ${client.guilds.size} server','www.twich.tv/peery13')
