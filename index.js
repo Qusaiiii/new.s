@@ -7,7 +7,6 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '*';
 const discord_token = "Mzg4NzAwODYzODkzNjAyMzA0.DR0WSw.kbYGvX1znbGB17jAODDfSU1MUNU";
 client.on('ready', () => {
   client.user.setGame('*help | *invite','https://www.twitch.tv/peery13');
