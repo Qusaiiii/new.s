@@ -3,7 +3,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   client.user.setGame('*help | *invite','https://www.twitch.tv/peery13');
   console.log('---------------');
-  console.log(' Bot Is Online')
+  console.log(' Hi Peery! Im Ready')
   console.log('---------------')
 });
 	
