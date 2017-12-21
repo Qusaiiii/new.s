@@ -731,6 +731,35 @@ client.on("message", msg => {
   }
 });
 
+client.on('message', message => {
+var prefix = "*";
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id == ID ROOM) return;
+
+if (message.content.startsWith(prefix + 'playingp')) {
+  client.user.setGame(argresult);
+    message.channel.sendMessage(`**${argresult}** : Status changed`)
+} else
+
+if (message.content.startsWith(prefix + 'Streamp')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/peery13");
+    message.channel.sendMessage(`**${argresult}** :The bot stream has been changed`)
+} else
+
+if (message.content.startsWith(prefix + 'Namep')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : Name changed`)
+  return message.reply("**You**");
+} else
+if (message.content.startsWith(prefix + 'Imgp')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : The bot image has been changed`);
+
+}
+});
+
 
 client.login(process.env.BOT_TOKEN);
 
