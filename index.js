@@ -736,8 +736,7 @@ var prefix = "*";
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == ID ROOM) return;
-
+  if (message.author.id == 393386869012037642 ) return;
 if (message.content.startsWith(prefix + 'playingp')) {
   client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult}** : Status changed`)
