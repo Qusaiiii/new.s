@@ -1,19 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
-
-client.on("ready", () => {
- const Games = [`*help | *invite`]
- setInterval(() => { client.user.setGame(`${Games[Math.floor(Math.random() * Games.length)] }`) }, 10000)
-	
+client.on('ready', () => {
+  client.user.setGame(`*help | in ${client.guilds.size} server` .,'https://www.twitch.tv/peery13');
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
 });
-
-client.on('message', msg => {
-  if (msg.content === 'pin31231231241sdg') {
-    msg.reply('Pong!');
-  }
-});
-	
 	
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
