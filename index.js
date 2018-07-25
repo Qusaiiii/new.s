@@ -577,7 +577,7 @@ if (message.content.startsWith(prefix + 'setplay')) {
         .setFooter(`Tanki Online.`)
                 .setTimestamp()
     message.channel.send(embed)      
-}})
+});
 
 
 client.login(process.env.BOT_TOKEN);
