@@ -114,7 +114,7 @@ client.on('message', message => {
     }
     });
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
       let welcomer = member.guild.channels.find("name","welcome");
       if(!welcomer) return;
       if(welcomer) {
