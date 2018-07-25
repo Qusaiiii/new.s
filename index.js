@@ -565,19 +565,5 @@ if (message.content.startsWith(prefix + 'setplay')) {
 
 });
 
-  client.on('message', message => {
-  if(message.content.startsWith('!!tostats')) {
- const args = message.content.split(" ").slice(1).join(" ")
-    if (!args) return message.channel.send("** يجب كتابة الاسم . **");
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(`https://ratings.tankionline.com/en/user/${args}`)
-        .addField("📜 اسم الحساب",`${args}`,true")
-        .setImage(`https://ratings.tankionline.com/en/user/${args}`)
-        .setFooter(`Tanki Online.`)
-                .setTimestamp()
-    message.channel.send(embed)      
-});
-
 
 client.login(process.env.BOT_TOKEN);
