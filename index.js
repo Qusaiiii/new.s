@@ -565,4 +565,15 @@ if (message.content.startsWith(prefix + 'setplay')) {
 
 });
 
+  client.on('message', message => {
+        var prefix = "!!";
+                  if (message.content.startsWith(prefix + "voice-bc")) {
+      const broadcast = client.createVoiceBroadcast();
+      broadcast.playFile('./music.mp3');
+      for (const connection of client.voiceConnections.values()) {
+        connection.playBroadcast(broadcast);
+      }
+                  }
+                });
+
 client.login(process.env.BOT_TOKEN);
