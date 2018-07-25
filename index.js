@@ -589,45 +589,5 @@ function isYoutube(str) {
      }
     });
 
-client.on('message', message => {
-    if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('!!bcall')){
-if(!message.author.id === '324672376455299074') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
-
-
-client.on('message', message => {
-if (message.content.split(' ')[0] == '!!bc')
- message.guild.members.forEach( member => {
-         if (!message.member.hasPermission("CONNECT"))  return;
-member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.content.substr(3));
-                                                            message.delete();
-});
-});
-
-client.on("message", message => {
-    var prefix = "!!";
- 
-            var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "bc")) {
-                         if (!message.member.hasPermission("CONNECT"))  return;
-                            let embed4 = new Discord.RichEmbed()
-             .setDescription("**:white_check_mark: | جاري ارسال البرودكاست**")
-           .addField("مرسل البرودكاست" , message.author)
-          .addField("نص البرودكاست" ,args.join("  "))
-                            .addField("عدد الاعضاء المرسل لهم :busts_in_silhouette:" ,` **[${message.guild.memberCount}]**`,true)
-                                                            .setColor("#008000")
-                                message.channel.sendEmbed(embed4);
-                                                      message.delete();
-                            
-                          }
-});
-
 
 client.login(process.env.BOT_TOKEN);
