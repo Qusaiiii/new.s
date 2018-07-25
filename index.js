@@ -602,13 +602,6 @@ m.sendMessage(args)
 });
 
 
-const Discord = require("discord.js");
-const client = new Discord.Client();
-client.on('ready', () => {
-  console.log(`Hixxx online`);
-
-});
-
 client.on('message', message => {
 if (message.content.split(' ')[0] == '!!bc')
  message.guild.members.forEach( member => {
