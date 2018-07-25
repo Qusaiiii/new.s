@@ -11211,7 +11211,7 @@ message.member.addRole(message.guild.roles.find("name", "100"));
 
   if (message.content === '!!colors') {
       if (!message.channel.guild) return;
-    message.channel.sendFile('https://cdn.discordapp.com/attachments/442305546008395787/447014844147826700/36d3ebcb8af4bd420528517d747d5c11.jpg');
+    message.channel.sendFile('https://cdn.discordapp.com/attachments/456580128445825026/471803441111498763/colors.png');
   }
 	
 });
