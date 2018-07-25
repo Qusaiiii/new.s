@@ -582,4 +582,24 @@ if(ra3d.content.startsWith(prefix + 'cc')) {
             }
        });
 
+client.on('message', msg =>{
+  if(msg.channel.type !=="text") return;
+msg.content = msg.content.trim();
+msg.args = msg.content.split(' ').slice(1);
+msg.pre = "!!";
+  var message=msg
+if(msg.content.indexOf(msg.pre+'color')==0){
+var role = msg.mentions.roles.first() || msg.guild.roles.find('name', msg.args) || msg.guild.roles.get(msg.args);
+  if(!role || typeof role !== "number") {
+  msg.reply(` **Sorry, i can't find this color**`)
+  }else{
+message.guild.member(msg.author).roles.forEach(r =>{
+if(typeof r.name == "number") msg.member.removeRole(r.id)
+})
+msg.member.addRole(role.id);
+msg.reply(` **تم اعطائك اللون**`)
+  }
+}
+});
+
 client.login(process.env.BOT_TOKEN);
