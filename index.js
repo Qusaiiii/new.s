@@ -11791,7 +11791,19 @@ if(ra3d.content.startsWith(prefix + 'cc')) {
             }
        });
 
-
+client.on('message' , async rebel => {
+    if(rebel.author.bot) return;
+    var ReBeL = client.guilds.get("456086682710704148");
+    let room = ReBeL.channels.get('471793330674466822');
+if(rebel.channel.type == 'dm') return;
+const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      		.setFooter(` العدد : ${ReBeL.members.filter(member => member.voiceChannel).size}`)
+      .setDescription(`\n${ReBeL.members.filter(member => member.voiceChannel).map(m => m.user.tag).join('\n')}`);
+setInterval(() => {
+room.sendEmbed(embed);
+}, 1*60);// لو تبي تغير الوقت اللي تنرسل فيه الرساله غير رقم 30 الى عدد الدقائق اللي تبيهه ..
+});
 
 
 client.login(process.env.BOT_TOKEN);
