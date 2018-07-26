@@ -9,9 +9,21 @@ const fetchVideoInfo = require('youtube-info');
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = '!!';
 
-
-client.on('ready', () => {
-    console.log('I am ready!');
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '471792603659239445').setName("●");
+client.channels.find('id', '471792603659239445').setName("L");
+client.channels.find('id', '471792603659239445').setName("Le");
+client.channels.find('id', '471792603659239445').setName("Leg");
+client.channels.find('id', '471792603659239445').setName("Lege");
+client.channels.find('id', '471792603659239445').setName("Legen");
+client.channels.find('id', '471792603659239445').setName("Legends");
+client.channels.find('id', '471792603659239445').setName("Legends A");
+client.channels.find('id', '471792603659239445').setName("Legends Ar");
+client.channels.find('id', '471792603659239445').setName("Legends Arm");
+client.channels.find('id', '471792603659239445').setName("Legends Army");
+client.channels.find('id', '471792603659239445').setName("● Legends Army ●");
+  }, 3000);
 });
 
 client.on('message', message => {
@@ -11778,6 +11790,7 @@ if(ra3d.content.startsWith(prefix + 'cc')) {
               }
             }
        });
+
 
 
 
