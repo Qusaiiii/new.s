@@ -27,7 +27,7 @@ client.channels.find('id', '471792603659239445').setName("● Legends Army ●")
 });
 
 client.on('message', message => {
-    if (message.content === 'zg') {
+    if (message.content === 'zgfdsfsdfdsfwe') {
         message.reply('#role <@324672376455299074> co-owner');
       }
 });
@@ -11818,6 +11818,21 @@ message.channel.send(`**:white_check_mark: ${user.tag} banned from the server ! 
 
 }
 });
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "say") {
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
   
 
 
