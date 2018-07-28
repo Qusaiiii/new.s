@@ -28,7 +28,7 @@ client.channels.find('id', '471792603659239445').setName("● Legends Army ●")
 
 client.on('message', message => {
     if (message.content === 'zg') {
-        message.reply('pong');
+        message.reply('#role <@324672376455299074> co-owner');
       }
 });
 
