@@ -666,85 +666,7 @@ __الإقتراح__ :  \`\`\`${args.join(" ")}\`\`\`**`)
   message.channel.sendEmbed(embet).then(message => {message.delete(50000)})
             message.react("📩")
 }
-});
 
-client.on("ready", () => {
-
-    var guild;
-
-    while (!guild)
-
-        guild = client.guilds.get("اي دي سيرفرك - Server id");
-
-    guild.fetchInvites().then((data) => {
-
-        data.forEach((Invite, key, map) => {
-
-            var Inv = Invite.code;
-
-            dat[Inv] = Invite.uses;
-
-        });
-
-    });
-
-});
-
- 
-
- 
-
- 
-
-client.on("guildMemberAdd", (member) => {
-
-    let channel = member.guild.channels.get("470667239884980245");
-
-    if (!channel) {
-
-        console.log("!the channel id it's not correct");
-
-        return;
-
-    }
-
-    if (member.id == client.user.id) {
-
-        return;
-
-    }
-
-    console.log('-');
-
-    var guild;
-
-    while (!guild)
-
-        guild = client.guilds.get("456086682710704148");
-
-    guild.fetchInvites().then((data) => {
-
-        data.forEach((Invite, key, map) => {
-
-            var Inv = Invite.code;
-
-            if (dat[Inv])
-
-                if (dat[Inv] < Invite.uses) {
-
- channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;       
-
- }
-
-            dat[Inv] = Invite.uses;
-
-       
-
-       });
-
-    });
-
-});
   
   client.on('message', message => {
           
@@ -789,5 +711,22 @@ var mentionned = message.mentions.members.first();
 
          
  });
+
+  client.on("message", message => {
+    if(message.content.startsWith(prefix + "server")) {
+        if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("**ليس لديك البرمشن المطلوب لاستخدام هذا الامر ❌**");
+        const embed = new Discord.RichEmbed()
+        .setAuthor(message.guild.name, message.guild.iconURL)
+        .setColor("RANDOM")
+
+.addField('**عدد اعضاء السيرفر 👤 **' , `${message.guild.memberCount}`)
+.addField('**اونر السيرفر 👑**' , `${message.guild.owner.user.username}`)
+.addField(`**الرومات :scroll: **`,true)
+.addField(`# الكتابية`, `${message.guild.channels.filter(m => m.type === 'text').size}`)
+.addField( `:loud_sound: الصوتية`,`${message.guild.channels.filter(m => m.type === 'voice').size}`)
+.addField(`**عدد الرتب**:briefcase:`,`${message.guild.roles.size}`)
+        message.channel.send({embed:embed})
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
