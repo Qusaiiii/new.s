@@ -729,4 +729,47 @@ var mentionned = message.mentions.members.first();
     }
 });
 
+ client.on('message', message => {
+     if (message.content === prefix +"help") {
+    const embed = new Discord.RichEmbed()
+     .setColor("RANDOM")
+     .addField(`**__أوامر عامة__**`,`
+     **${prefix}server** → معلومات عن سيرفر
+     
+     **${prefix}user** → بعض المعلومات عن حسابك
+      
+     **${prefix}sug** → للاقتراح
+ 
+     **${prefix}cc** → لأنشاء الوان
+
+     **${prefix}credit** → رصيدك
+ 
+     **${prefix}daily** → لاخذ رصيد يومي
+       
+     **${prefix}trans** → لتحويل رصيد الى شخص اخر
+     `)
+     .addField(`**__أوامر الموسيقى__**`,`
+      **${prefix}play** → امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
+
+     **${prefix}stop** → ايقاف الاغنية 
+
+     **${prefix}skip** → امر تخطي الاغنية
+     
+     **${prefix}vol** → تغير مستوى الصوت 1 - 100
+      
+     **${prefix}pause** → ايقاف الاغنية مؤقتا 
+       
+     **${prefix}resume** → امر تكملة الاغنية
+       
+     **${prefix}move** → سحب البوت او ادخال البوت الى روم
+   
+       
+
+     prefix = ${prefix}
+     ping = ${Date.now() - message.createdTimestamp}`)
+
+      message.channel.send({embed});
+     }
+    });
+
 client.login(process.env.BOT_TOKEN);
