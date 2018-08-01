@@ -1362,7 +1362,7 @@ const kingmas = [
 
      prefix = ${prefix}
      ping = ${Date.now() - message.createdTimestamp}
-     Created by: <@324672376455299074> (! Peery ᵁᴳ#0609 )
+     Created by: <@324672376455299074>
 `)
 
       message.channel.send({embed});
